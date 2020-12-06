@@ -1,0 +1,5 @@
+CDN = Content Delivery Network
+npm = Note Package Manager
+DOM = Document Object Model
+
+as vezes dentro do mesmo projeto pode ter outra lib que tbm utiliza o $ então devemos evitar qualquer tipo de conflito com o jquery

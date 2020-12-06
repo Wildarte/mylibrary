@@ -1,0 +1,40 @@
+algumas anotações
+
+evento é um acontecimento
+
+também há acontecimentos em uma página web
+
+
+quando ocorre um evento, ficamos na espectativa
+
+issto também é possivel  em uma página web, através dos listeners (ouvinte)
+
+eventos de mouse
+
+$('elemento').click(function(){
+    //faça alguma coisa
+});
+
+eventos de teclado
+
+$('elemento').keypress(function(){
+    //faça alguma coisa
+});
+
+eventos de formulário
+
+$('elemento').submit(function(){
+
+})
+
+eventos de documento
+
+$(document).ready(function(){
+
+})
+
+eventos do navegador
+
+$('elemento').scroll(function(){
+
+});

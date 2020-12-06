@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evitar conflito</title>
+</head>
+<body>
+    
+    <h2>Como evitar conflito do jquery com outras libs</h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+        //uma forma de evitar que o jquery entre em conflitos com outras libs no caso delas também usarem o $
+
+        let $2 = jQuery.noConflict(); //podemos fazer assim para evitar conflitos
+
+        $2(document).ready(function(){
+            $2('h2').css('text-decoration', 'underline');
+        })
+       
+    </script>
+
+</body>
+</html>
