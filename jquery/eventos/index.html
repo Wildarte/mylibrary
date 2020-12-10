@@ -21,6 +21,17 @@
                 </div>
                 <div class="col-md-8 col-sm-8 col-xs-8 title">
                     <h1>Eventos no jQuery</h1>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit id natus, maiores accusantium veniam qui quas excepturi sunt possimus ad dolores itaque pariatur voluptatem odit architecto eveniet officia placeat nihil.Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aperiam amet magni voluptates quas, ullam consequatur est nesciunt similique illo dolores voluptas in quis minima nulla fugiat iste neque maiores!</p>
+                    <p>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus possimus distinctio quis dolore tempora recusandae voluptas facilis temporibus atque, cum provident, eaque blanditiis. Ab, doloribus fugiat. Explicabo quod commodi iste!</span>
+                        <span>Minima modi, sint atque obcaecati accusamus sapiente iste itaque officiis voluptatem accusantium porro ea quam laboriosam vitae harum voluptates. Iusto autem magnam blanditiis quidem reprehenderit praesentium veniam quo soluta ea.</span>
+                        <span>Quas harum facere molestias adipisci earum saepe ex consequatur quidem aperiam consequuntur! Eum, amet sequi quidem harum, nemo laborum quod autem assumenda pariatur repudiandae, delectus consectetur officia recusandae non placeat?</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -185,41 +196,23 @@
     <script>
     
         $(document).ready(function(){
+            
+            $('#books_list tbody td').on('click contextmenu', function(e){
 
-            $('p').click(function(event){
+                if(e.type == 'contextmenu') e.preventDefault();
 
-                //retorna o tipo de evento executado
-                //console.log("Voce realizou um evento de: "+ event.type);
+                $('#books_list tbody td').css({
+                    backgroundColor: 'initial',
+                    color: 'initial'
+                });
 
-                //retorna o nome do elemento que clicamos
-                //alert(`Você clicou na tecla <${event.target.tagName}>`);
+                $(this).css({
+                    backgroundColor: 'black',
+                    color: 'white'
+                })
 
-                //console.log('TARGET ', event.target);
-                //console.log('CURRENT TARGET', event.currentTarget);
-
-            });
-
-            //retorna a posição X e Y do elemento onde ocorreu o evento
-            //event.pageX, event.pageY
-
-            $('[name=bio]').keydown(function(event){
-
-                //retorna o código da tecla
-                //console.log(event.keyCode);
-                //console.log(event.which);
-
-                if(event.key ===  'Enter'){
-                    event.preventDefault();
-                    alert(`Você precionou a tecla ${event.key}`);
-                }
-                
             })
 
-            //para a execução padrao do evento
-            event.preventDefault()
-
-            //para a propagação de eventos
-            event.stopPropagation()
         });
 
     </script>
