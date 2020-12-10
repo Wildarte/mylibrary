@@ -111,4 +111,155 @@ Margin collapse
 
 top and bottom margin of elements are sometimes collapsed into a single margin that is equal to the...
 
-((Height/Width))
+css Height/Width
+
+css setting height and width
+
+the height and width properties are used to set the height and width of an element.
+
+The height and width properties do not include padding, borders, ou margins. It sets the height/width of the area inside the padding, border, and margin of the element.
+
+css height and width values
+
+the height and width properties may have the following values:
+
+
+CSS box model
+
+
+the css Box Model
+
+all html elements can be considered as boxes. In CSS, the term "box model"is used when talking about design and layout.
+
+the css box model is essentially a box wraps around every html element. it consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
+
+Explanation of the different parts:
+
+content - the content of the bpx, where text and images appear
+padding - clear an area around the content. the padding is transparent
+border - a border that goes around the padding and content
+margin - clears an area outside the border. the margin is transparent
+
+the box model allows us to add a border around elements, and to define space between elements.
+
+width and height of an elment
+
+in order to set the width and height of an element correctly in all browsers, you need to know how the box model works.
+
+Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area.
+
+
+CSS outline
+
+an outline is a line that is drawn around elements, outside the borders, to make the element "stand out".
+
+CSS Outline width
+
+The outline-width property specifies the width of the outline, and can have one of the following values:
+
+
+thin (typically 1px)
+medium (typically 3px
+thick (typically 5px)
+a specific size (in px, pt, cm, em, etc)
+
+Example:
+
+CSS outline offset
+
+The outline-offset property adds space between an outline and the edge/border od an element. The space between an element and its outline is transparent.
+
+The followinf example specifies an outline 15px outside the border edge:
+
+p{
+margin: 30px;
+border: 1px solid black;
+outline: 1px solid red;
+outline-offset: 15px;
+}
+
+The following example shows that the space between an element and its outline is transparent:
+
+text-alignment
+
+the text-alignment property is used to set the horizontal alignment of a text.
+
+A text can be left or right aligned, centered, or justified.
+
+The following example show center aligned, and left and right aligned text (left alignment is default direction is left-to-right, and right alignment is default if text
+
+
+text direction
+
+The direction and unicode-bidi propertires can be used to change the text direction of an element:
+
+p{
+direction: rtl;
+unicode-bidi: bidi-override;
+}
+
+
+vertical alignment
+The vertical-align property sets the vertical alignment of an element.
+
+This example demonstrate how to set the vertical alignment of an image in a text:
+
+text transformation
+
+The text-transformation property is used to specify uppercase and lowercase letters in a text.
+it can be used to turn everyhing into uppercase or lowercase letters, or capitalize the first letter of each word:
+
+Text indentation
+
+The text-indent property is used to specify the indentation of the first line of a text:
+
+Ex:
+
+p{
+text-indent: 50px;
+}
+
+letter spacing
+
+the letter-spacing property is used to specify the space between the characters in a text.
+The followig example demonstrates how to increase or decrease the space between characters:
+
+line height
+
+The line-height property is used specify the space between lines:
+
+word spacing
+
+The word-spacing property is used to specify the space between the words in a text.
+The following example demonstrates how to increase or decrease the space between words:
+
+Text Shadow
+
+The text-shadow property adds shadow to text.
+
+In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):
+
+Ex:
+
+h1{
+    text-shadow: 2px 2px;
+}
+
+Next, add a color (red) to the shadow:
+
+
+h1{
+    text-shadow: 2px 2px red;
+}
+
+Then, add a blur effect(5px) to the shadow:
+
+h1{
+    text-shadow: 2px 2px 5px red;
+}
+
+
+
+((CSS Fonts))
+
+

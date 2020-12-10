@@ -8,22 +8,42 @@
         <title>CSS</title>
         <link rel="stylesheet" href="style.css">
         <style>
-            p{
-                text-align: center;
-                width: 30%;
-                margin: auto;
-                border: 1px solid;
+            h1{
+                /*text-transform: lowercase; /** deixa todo o texto minusculo*/
+                /*text-transform: uppercase; /* deixa todo o texto maiúsculo*/
+                /*text-transform: capitalize; /* deixa a primeira letra de cada palavra maiuscula*/
+                /*letter-spacing: 10px; /* deixa espaço entre as letras */
+                /*line-height: 1.8px; /* determina o espaço entre as linhas */
+                /*word-spacing: 10px; /* especifica o espaço entre as palavras*/
+                /*white-space: nowrap; /* tira a quebra de linha do texto */
+                
+                text-transform: uppercase;
+                text-shadow: 2px 2px 5px red;
             }
-            @media(max-width: 600px){
-                p{
-                    width: 100%;
-                }
+            h2{
+                text-shadow: 2px 2px 5px rebeccapurple;
             }
         </style>
     </head>
     <body>
         <h1>Titulo</h1>
         <hr>
-        <p>text text text text </p>
+        <h2>Venha participar da nossa primeira turma: Como montar um campeonato de sucesso</h2>
+        <textarea type="text" name="text" id="text" cols="30" rows="10"></textarea>
+        <img src="" alt="">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $('textarea').change(function(){
+
+                    console.log('jjj');
+                    let tex = $('textarea').val()
+                    $('h2').text(tex);
+
+                })
+            })
+        </script>
     </body>
 </html>
