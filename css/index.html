@@ -7,7 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSS</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|emboss|outline|fire|multiple" rel="stylesheet">
         <style>
+            body{
+                font-family: "Audiowide", sans-serif;
+            }
             h1{
                 /*text-transform: lowercase; /** deixa todo o texto minusculo*/
                 /*text-transform: uppercase; /* deixa todo o texto maiúsculo*/
@@ -17,20 +22,46 @@
                 /*word-spacing: 10px; /* especifica o espaço entre as palavras*/
                 /*white-space: nowrap; /* tira a quebra de linha do texto */
                 
-                text-transform: uppercase;
-                text-shadow: 2px 2px 5px red;
+                /*text-transform: uppercase; /* deixa o texto todo maiusculo*/
+                /*text-shadow: 2px 2px 5px red; /* coloca sombra no texto */
+
+                /*font-style: normal; /* define o estilo da fonta para normal */
+                /*font-weight: 100; /* define o peso da fonte */
+                font-variant: normal;
+                font-family: 'Sofia', sans-serif;
+                font-size:60px;
+                border: 1px solid;
+                text-shadow: 3px 3px 3px #ababab;
             }
             h2{
+                font-family: 'Trirong', serif;
+                width: 80%;
+                margin: auto;
+                border: 1px solid;
                 text-shadow: 2px 2px 5px rebeccapurple;
+            }
+            h2 #effect{
+                font-family: "Arial", sans-serif;
+                text-shadow: none;
+                color: black;
             }
         </style>
     </head>
     <body>
-        <h1>Titulo</h1>
+        <h1 class="font-effect-fire">Titulo</h1>
         <hr>
         <h2>Venha participar da nossa primeira turma: Como montar um campeonato de sucesso</h2>
         <textarea type="text" name="text" id="text" cols="30" rows="10"></textarea>
         <img src="" alt="">
+
+        <hr>
+
+        <h2>Veja que incrível usando efeitos nas fontes com fonts google</h2>
+
+        <h2 id="effect" class="font-effect-neon">Effect neon</h2>
+        <h2 id="effect" class="font-effect-outline">Effect outline</h2>
+        <h2 id="effect" class="font-effect-emboss">Effect emboss</h2>
+        <h2 id="effect" class="font-effect-multiple">Effect multiple</h2>
 
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script>
@@ -43,7 +74,7 @@
                     $('h2').text(tex);
 
                 })
-            })
+            });
         </script>
     </body>
 </html>

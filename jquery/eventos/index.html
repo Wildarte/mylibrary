@@ -47,6 +47,8 @@
 
                     <h3 class="text-center books"><u>Lista de Livros</u></h3>
 
+                    <button class="btn btn-info" id="btn_add_book">Adicionar Livros</button>
+
                     <table class="table table-striped" id="books_list">
                         <thead>
                             <tr>
@@ -197,19 +199,17 @@
     
         $(document).ready(function(){
             
-            $('#books_list tbody td').on('click contextmenu', function(e){
+            $('#form_login').on('change', '[name]', function(){
 
-                if(e.type == 'contextmenu') e.preventDefault();
+                alert('Valor do campo: ' + $(this).val());
 
-                $('#books_list tbody td').css({
-                    backgroundColor: 'initial',
-                    color: 'initial'
-                });
+            })
 
-                $(this).css({
-                    backgroundColor: 'black',
-                    color: 'white'
-                })
+            $('#form_login [name=bio]').on('change', function(event){
+                
+                event.stopPropagation(); //essa linha para com a propagação do evento
+
+                $(this).css('background', 'red');
 
             })
 

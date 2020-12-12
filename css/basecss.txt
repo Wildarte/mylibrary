@@ -260,6 +260,101 @@ h1{
 
 
 
-((CSS Fonts))
+CSS Fonts
+
+Font Weight
+
+The font-weight property specifies the weight of a font:
+
+p{
+    font-weight: normal;
+}
 
 
+Font Variant
+
+The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+
+In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letter in the text.
+
+Ex:
+
+p{
+    font-variant: normal;
+}
+
+
+CSS Google Fonts
+
+If you do not want to use any of the standard fonts in HTML, you can use Google Fonts.
+Google Fonts are free to use, and have more than 1000 fonts to choose from.
+
+How to use Google Fonts
+
+Just add a special style sheet link in the <head> section and then refer to the font in the CSS.
+
+Ex:
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+
+Enabling Font Effects
+
+Google have also enable different font effects that you can use.
+First add effect=effectname to the Google API, then add a special class name to the element that is going to use the special effect. The class name always with font-effect - and ends with the effectname.
+
+Ex:
+
+Add the fire effect to the "Sofia" font:
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<style>
+font-family: "Sofia", sans-serif;
+font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-fire">Sofia on Fire</h1>
+
+</body>
+
+
+CSS Great Font Pairings
+
+Great font pairings are essential to great design.
+
+Font Pairing Rules
+
+Here are some basic rules to create great font pairings:
+
+1. Compliment
+
+It is always safe to find font pairings that complement one another.
+A great font combination should harmonize, without too similaar ot too different.
+
+2. Use Font Superfamilies
+
+A font superfamily is a set of fonts designed to work well together. So, using differents fonts whithin the same superfamily is safe.
+
+For example, the Lucida superfamily contains the following fonts: Lucida Sans, Lucida Serif, Lucida Typewriter Sans, Lucida Typerwriter Serif and Lucida Math.
+
+3. Contrast is king
+
+Two fonts that are too similar will often conflict. However, contrast, contrasts, done the right way, brings out the best in each font. Example: Combining serif with sans serif is a well know combination.
+A strong superfamily includes both serif and sans serifi variations of the same font (e.g Lucida and Lucida Sans)
+
+4. Choose Only One Boss
+
+One font should be the boss. This establishes a hierarchy for the fonts on your page. This can be achieved by varying the size, weight and color.
+
+One way abreviate of specifies the font is:
+
+p{
+    font: italic small-caps bold 12px/30px Georgia, serif;
+}
+
+
+CSS Icons
