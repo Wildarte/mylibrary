@@ -65,10 +65,74 @@
             table{
                 border-collapse: collapse;
             }
+            #pos_static{
+                position: static;
+                border: 1px solid;
+                width: 300px;
+            }
+            #pos_relative{
+                position: relative;/*precisa definir o left, right etc após o position*/
+                left: 30px;
+                border: 1px solid;
+                width: 300px;
+            }
+            h3.pos_fixed{
+                background-color: grey;
+                position: fixed;
+                bottom:     0px;
+                right: 0px;
+                width: 200px;
+                border: 3px solid green;
+                padding: 3px;
+                z-index: 1; /* isso aqui é só pra deixar esse elemento por cima dos outros */
+            }
+            div.relative{
+                position: relative;
+                width: 500px;
+                height: 300px;
+                border: 2px solid green;
+            }
+            div.absolute{
+                position: absolute;
+                top: 100px;
+                right: 0;
+                width: 250px;
+                height: 100px;
+                border: 2px solid green;
+            }
+            h2.sticky{
+                background-color: lightgreen;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-shadow: none;
+                color: #fff;
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+                padding: 5px 0px;
+                border: 2px solid green;
+                position: sticky; /* o sticky permite que o elemente fique fixo na tela quando for rolado o scroll */
+                top: 0; /* ai precisamo definir o top como 0 para que quando o scroll for rolado o elemento fique positionado no top com zero de distancia entre o elemento e o topo*/
+            }
+            div.container{
+                position: relative;
+            }
+            p.text{
+                position: absolute;
+                top: 8px;
+                left: 16px;
+                font-size: 24px;
+            }
+            div.container img{
+                width: 100%;
+                opacity: 0.5;
+                margin: 0 auto;
+            }
         </style>
     </head>
     <body>
         <h1 class="font-effect-fire">Titulo</h1>
+        <hr>
+        <h2 class="sticky">Este elemento usa o position: sticky</h2>
         <hr>
         <h2>Venha participar da nossa primeira turma: Como montar um campeonato de sucesso</h2>
         <textarea type="text" name="text" id="text" cols="30" rows="10"></textarea>
@@ -103,7 +167,53 @@
 
         <hr>
 
-        
+        <h3>width e max-width</h3>
+        <p>parece que nao mas width e max-width tem muita diferença se a gente redimensionar essa janela veremos entre os dois</p>
+
+        <p style="border: 1px solid green; padding: 5px; width: 500px; text-align: center; margin: auto;">com  width</p>
+
+        <hr>
+
+        <h3>com max-width</h3>
+
+        <p style="border: 1px solid green; padding: 5px; max-width: 500px; text-align: center; margin: auto;">com max-width</p>
+    
+        <hr>
+
+        <h3 id="pos_static">Testando a propriedade position com static</h3>
+
+        <h3 id="pos_relative">Testando a propriedade position com relative</h3>
+
+        <h3 class="pos_fixed">Elemento fixed</h3>
+
+        <hr>
+
+        <h3>Position com absolute</h3>
+
+        <div class="relative">This div element has position: relative
+            <div class="absolute">This div element has position: absolute</div>
+        </div>
+
+        <hr>
+
+        <h3>Position com sticky <small>(esse foi preciso deixar la em cima na página para ver melhor seu efeito)</small></h3>
+
+        <hr>
+
+        <h3>Texto por cima da imagem</h3>
+
+        <div class="container">
+            <img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="imagem de w3schools">
+            <p class="text">This text stay over image</p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script>
