@@ -150,6 +150,11 @@
                     border: 1px solid black;
                 }
             }
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
         </style>
     </head>
     <body>
@@ -257,8 +262,48 @@
             
         </div>
 
-        <div class="mycontainer">
-            teste
+        <hr style="clear:left">
+
+        <h3>Brincando com float property</h3>
+
+        <div style="border: 1px solid gray; padding: 5px;">
+            <img style="width: 30vw; float: right;" src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80" alt="">
+            <div style="border: 1px solid gray; padding: 5px; clear: right">
+                <img style="width: 30vw;" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="">
+            </div>
+        </div>
+
+        <hr>
+
+        <h3>O esquema para usar o clearfix</h3>
+        <small style="color: red"><b>se uma imagem estiver com float e ela for maior do que o container que ela estiver ela pode "vazar" para fora e ficar assim(meu comentário)</b></small>
+        <div style="border: 1px solid gray; padding: 10px">
+            <img style="width: 50vw; float: right" src="https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic reiciendis laudantium necessitatibus impedit numquam, similique magnam repellat ea fugit nobis dignissimos placeat dolorum harum sequi ab aspernatur odio temporibus.</p>
+        </div>
+        <br style="clear: right;">
+        <small style="color: red"><strong>Mas ai você pode usar o overflow property com auto (qualquer coisa só olhar no código</strong></small>
+        <div style="border: 1px solid gray; padding: 10px; overflow: auto;">
+            <img style="width: 50vw; float: right" src="https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic reiciendis laudantium necessitatibus impedit numquam, similique magnam repellat ea fugit nobis dignissimos placeat dolorum harum sequi ab aspernatur odio temporibus.</p>
+        </div>
+
+        <hr>
+
+        <h3>Aqui foi um exemplo de código moderno do próprio w3schools com o hack do clearfix e sem o hack do clearfix</h3>
+        
+        <h4 style="color: red;">Without clearfix hack</h4>
+        <div style="border: 3px solid #4CAF50; padding: 5px;">
+            <img style="float: right" width="170" height="170" src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic reiciendis laudantium necessitatibus impedit numquam, similique magnam repellat ea fugit nobis dignissimos placeat dolorum harum sequi ab aspernatur odio temporibus.</p>
+        </div>
+
+        <br style="clear: right;">
+
+        <h4 style="color: red;">With clearfix hack (coloquei o código numa class)</h4>
+        <div style="border: 3px solid #4CAF50; padding: 5px" class="clearfix">
+            <img style="float: right" width="170" height="170" src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic reiciendis laudantium necessitatibus impedit numquam, similique magnam repellat ea fugit nobis dignissimos placeat dolorum harum sequi ab aspernatur odio temporibus.</p>
         </div>
 
         <br>

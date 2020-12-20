@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0 auto;
+            padding: 0px;
+        }
+        .h1{
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 800;
+            text-align: center;
+            text-shadow: 2px 2px 20px teal;
+
+        }
+        .box{
+            float: left;
+            width: 50%;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        .box-33{
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .img-container{
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 14px;
+            text-align: center;
+        }
+        li a:hover{
+            background-color: red
+        }
+        .active{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li class="active"><a href="http://">item</a></li>
+        <li><a href="http://">item</a></li>
+        <li><a href="http://">item</a></li>
+        <li><a href="http://">item</a></li>
+    </ul>
+    
+    <h1 class="h1">CSS Layout - Float Examples</h1>
+
+    <div class="clearfix">
+        <div class="box" style="background-color: #eee;">
+            Box 1
+        </div>
+        <div class="box" style="background-color: #ddd;">
+            Box 2
+        </div>
+    </div>
+    
+
+    <hr style="clear: both;">
+
+    <div class="box-33" style="background-color: #eee;">
+        Box 1
+    </div>
+    <div class="box-33" style="background-color: #ddd;">
+        Box 2
+    </div> <div class="box-33" style="background-color: #ccc;">
+        Box 3
+    </div>
+
+    <hr style="clear: both;">
+
+    <h3>Images</h3>
+
+    <div class="clearfix">
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" alt="" width="100%">
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1534269222346-5a896154c41d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" width="100%">
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" width="100%">
+        </div>
+    </div>
+
+</body>
+</html>

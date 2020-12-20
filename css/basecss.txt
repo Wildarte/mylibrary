@@ -599,4 +599,61 @@ The following example specifies that an image should flat to the right in a text
 
 ((clear and clearfix))
 
+The clear property specifies what elements can float beside the cleared element and on which side.
+
+The clear property can have one of the following values:
+
+ - none - allows floating elements on both sides. This os default
+ - left - no floating elements allowed on the left side
+ - right - no floating elements allowed on the right side
+ - both - no floating elements allowed on either the left or the right side
+ - inherit - The element inherits the clear value of its parent
+
+The most common way to use the clear property is after you have used a float property on an element
+
+The most common way to use the clear property is after you have used a float property on an element
+
+The most common way to use the clear property is after you have used a float property on an element
+(eu repeti 3x de propósito)
+
+when clearing floats, you should match the clear t the float: if an element is floated to the left, then you should clear to the left. You floated element will continue to float, but the cleared element will appear below it on the web page.
+
+The following example clears the float to the left. Means that no floating elements are allowed on the left side (of the div):
+
+The clearfix hack
+
+if an element is taller than element containing it, and it is floated, it will "overflow" outside of its container
+
+Then we can add overflow: auto; to the containing element to fix this problem:
+
+The overflow: auto clearfix works well as long as you are able keep control of your margins and padding (else you might see scrollbars). The new, modern clearfix hack however, is safer to use, and the following code is used for most webpages.
+
+
+
+************************************************
+Here is just one anotation about Box Model
+
+
+All html elements can be considered as boxes. In css, the term "box model" is used when talking about designa and layout.
+
+the css box model is essentially a box that wraps around every html element. it consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
+
+
+Explanation of the different parts:
+
+content - the content of the box, where text and immages appear
+padding - clear an area around the content. the padding is transparent
+border - a border that goes around the padding and content
+margin - clears an area outside the border. the margin is transparent
+
+the box model allows us to add a border around elements, and to define space between elements.
+
+((CSS Layout - display: inline-block))
+
+
+
+
+
+
+
 
