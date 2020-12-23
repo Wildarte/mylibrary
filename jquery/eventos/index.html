@@ -69,6 +69,14 @@
                                 <td>Dom Casmurro</td>
                                 <td>Machado de Assis</td>
                             </tr>
+                            <tr>
+                                <td>Código Perfeito</td>
+                                <td>desconhecido</td>
+                            </tr>
+                            <tr>
+                                <td>Saindo da Matrix</td>
+                                <td>Messias</td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -183,6 +191,8 @@
             <p>Lorem <span> ipsum dolor sit amet consectetur adipisicing elit. Sint, odit? Voluptate ipsum neque quia aut</span>, et nam repudiandae minus inventore laboriosam iusto in fugiat porro impedit nemo expedita dolorum qui?</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, blanditiis nam! Officia repudiandae eligendi sunt impedit illum libero, expedita aspernatur nulla optio! Alias vero adipisci excepturi error explicabo blanditiis libero.</p>
 
+            <button class="btn btn-warning" id="btn_remove_css_color">Retira cor vermelha</button>
+
         </div>
 
     </section>
@@ -199,19 +209,7 @@
     
         $(document).ready(function(){
             
-            $('#form_login').on('change', '[name]', function(){
-
-                alert('Valor do campo: ' + $(this).val());
-
-            })
-
-            $('#form_login [name=bio]').on('change', function(event){
-                
-                event.stopPropagation(); //essa linha para com a propagação do evento
-
-                $(this).css('background', 'red');
-
-            })
+            
 
         });
 

@@ -155,6 +155,96 @@
                 clear: both;
                 display: table;
             }
+            .a{
+                display: inline;
+                background-color: yellow;
+                color: #000;
+                border: 1px solid;
+                width: 60px;
+                height: 80px;
+            }
+            .b{
+                display: block;
+                background-color: yellow;
+                color: #000;
+                border: 1px solid;
+                width: 60px;
+                height: 80px;
+            }
+            .c{
+                display: inline-block;
+                background-color: yellow;
+                color: #000;
+                border: 1px solid;
+                width: 60px;
+                height: 80px;
+            }
+            .align-center-div{
+                border: 3px solid green;
+                width: 50%;
+                padding: 10px;
+                margin: auto;
+            }
+            .text-centered{
+                text-align: center;
+                border: 3px solid green;
+            }
+            .img-center{
+                width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            .center-position{
+                border: 3px solid green;
+                width: 300px;
+                right: 0px;
+                position: absolute;
+                padding: 10px;
+            }
+            .align-float{
+                float: right;
+                border: 3px solid green;
+                width: 300px;
+                padding: 10px;
+            }
+            .vertical-center-padding{
+                padding: 70px 0;
+                border: 3px solid green;
+                width: 300px;
+            }
+            .center-line-height{
+                border: 3px solid green;
+                height: 400px;
+                line-height: 400px;
+                text-align: center;
+            }
+            /* if the text has multiple lines, add the following */
+            .center-line-height p{
+                line-height: 1.5;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .center-transform{
+                height: 200px;
+                position: relative;
+                border: 3px solid green;
+            }
+            .center-transform p{
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .center-flex{
+                border: 3px solid green;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                height: 200px;
+                width: 400px;
+            }
         </style>
     </head>
     <body>
@@ -305,6 +395,96 @@
             <img style="float: right" width="170" height="170" src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic reiciendis laudantium necessitatibus impedit numquam, similique magnam repellat ea fugit nobis dignissimos placeat dolorum harum sequi ab aspernatur odio temporibus.</p>
         </div>
+
+        <hr>
+
+        <h3>The display property</h3>
+
+        <h4>display: inline</h4>
+
+        <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque beatae nobis corrupti at, quos magnam dolorem! Dignissimos <span class="a">Aliguan</span> <span class="a">venerian</span> saepe earum aliquam dolorem, nulla cum velit eaque illo aliquid dolor! Praesentium, numquam?</p>
+
+        <h4>display: block</h4>
+
+        <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque beatae nobis corrupti at, quos magnam dolorem! Dignissimos <span class="b">Aliguan</span> <span class="b">venerian</span> saepe earum aliquam dolorem, nulla cum velit eaque illo aliquid dolor! Praesentium, numquam?</p>
+
+        <h4>display: inline-block</h4>
+
+        <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque beatae nobis corrupti at, quos magnam dolorem! Dignissimos <span class="c">Aliguan</span> <span class="c">venerian</span> saepe earum aliquam dolorem, nulla cum velit eaque illo aliquid dolor! Praesentium, numquam?</p>
+
+
+        <hr>
+
+        <h3>CSS Layout - Horizontal & Vertical Align</h3>
+
+        <h4>Center Align Elements</h4>
+
+        <div class="align-center-div">
+            <p>This div element is centered</p>
+        </div>
+        <small> <strong>Note:</strong> Center aligning has no effect if width property is not set (or set to 100%)</small>
+
+        <h4>Center Align Text</h4>
+
+        <p>To just center the text inside an element, use text-align: center</p>
+
+        <div class="text-centered">
+            <p>This text is centered</p>
+        </div>
+
+        <h4>Center an image</h4>
+
+        <p>To center a image, set left and right margin to auto and make it into a block element</p>
+
+        <img class="img-center" src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="">
+
+        <h4>Left and Right align - Using Position</h4>
+
+        <p>One method for to alignin elements is to use position: absolute;</p>
+
+        <div class="center-position">
+            <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+        </div>
+
+        <h4 style="margin-top: 150px">Left and Right Align - Using float</h4>
+
+        <p>Another method for aligning elements is to use the float property</p>
+
+        <div class="align-float">
+            <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+        </div>
+
+        <h4 style="clear: right;">Center Vertically - Using Padding</h4>
+
+        <p>There ae many ways to center an element vertically in CSS. A simple solutionis to use top and bottom padding</p>
+
+        <div class="vertical-center-padding">
+            <p>I am vertically centered</p>
+        </div>
+
+        <h4>Center Vetically - Using line-height</h4>
+
+        <p>Another trick is to use the line-height property with a value that is equal to the height property</p>
+
+        <div class="center-line-height">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+
+        <h4>Center Vertically - Using position & transform</h4>
+
+        <div class="center-transform">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+
+        <h3>Center Vertically - Using Flexbox</h3>
+
+        <p>You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions</p>
+
+        <div class="center-flex">
+            <p>I am vertically and horizontally centered.</p>
+        </div>
+
+
 
         <br>
         <br>

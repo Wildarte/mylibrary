@@ -648,7 +648,47 @@ margin - clears an area outside the border. the margin is transparent
 
 the box model allows us to add a border around elements, and to define space between elements.
 
-((CSS Layout - display: inline-block))
+
+CSS Layout - display: inline-block
+
+The display: inline-block value
+
+compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+Also, with display: inline-block, the top and bottom margins/paddings are respedcted, but with display: inline they are not.
+
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
+
+The following example shows the different behavior of display: display: inline, display: inline-block and display: blok
+
+CSS Layout - Horizontal & Vertical Align
+
+Center Align Elements
+
+To horizontally center a block element (like div), use margin: auto;
+
+Setting the width of the element will prevent it from stretching out to the edges of its container.
+
+The element will then take up the specified width, and the remaining space will be split equally between the two margins:
+
+Left and Right Align - Using float
+
+Another method for aligning elements is to use the float property:
+
+
+Center Vertically - Using padding
+
+
+There are many ways to center an element vetically in CSS. A simple solution is to use top an bottom padding:
+
+
+Center vetically -using position & transform
+
+if padding and line-height are not options, another solution it to use positioning and the transform property:
+
+
+
+((CSS Combinators))
 
 
 
