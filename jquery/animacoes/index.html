@@ -1,18 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery - Animations</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-</head>
-<body>
-    
-    <h1>Curso Hcode</h1>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Animation - jQuery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <ul class="couses">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/mycode/mystyle.css">
+    <style>
+        .bord{
+            border: 1px solid black;
+        }
+    </style>
+  </head>
+  <body>
 
-    </ul>
+    <header>
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <img style="width: 100%;" src="img/logo-hcode.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <h1 class="">Hcode Treinamentos</h1>
+                </div>
+                <div class="col-md-3 col-xs-12">
+                    <button class="btn btn-danger" id="disable_effects">Desabilitar/Habilitar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-success" id="init_animate">iniciar animação</button>
+                </div>
+            </div>
+        </div>
+    </header>
 
-</body>
+    <section style="background-color: #eee;">
+        <button class="btn btn-primary" id="esconde">Esconder</button>
+
+        <div class="container course_list">
+
+            <div class="row course_list_items">
+                <div class="col-12 col-md-4 wild-card text-center course_list_item">
+                    <div class="course_inner">
+                        <img src="img/img-courses/1280px-React-icon.svg.png" alt="">
+                        <h3>Curso React</h3>
+                    </div>
+                    <button class="btn btn-primary btn-block btn-toggle" >Saber Mais</button>                    
+                </div>
+                <div class="col-12 col-md-4 wild-card text-center course_list_item">
+                    <div class="course_inner">
+                        <img src="img/img-courses/css-3-logo-1.png" alt="">
+                        <h3>Curso CSS3</h3>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block btn-toggle">Saber Mais</button>
+                </div>
+                <div class="col-12 col-md-4 wild-card text-center course_list_item">
+                    <div class="course_inner">
+                        <img src="img/img-courses/javascript-logo-transparent-logo-javascript-images-3.png" alt="">
+                        <h3>Curso JavaScript</h3>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block btn-toggle">Saber Mais</button>
+                </div>
+            </div>
+            <div class="row course_list_items">
+                <div class="col-12 col-md-4 wild-card text-center course_list_item">
+                    <div class="course_inner">
+                        <img src="img/img-courses/jquery-logo.png" alt="">
+                        <h3>Curso jQuery</h3>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block btn-toggle">Saber Mais</button>
+                </div>
+                <div class="col-12 col-md-4 wild-card text-center course_list_item">
+                    <div class="course_inner">
+                        <img src="img/img-courses/php-1-logo-png-transparent.png" alt="">
+                        <h3>Curso PHP7</h3>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block btn-toggle">Saber Mais</button>
+                </div>
+                <div class="col-12 col-md-4 wild-card text-center course_list_item">
+                    <div class="course_inner">
+                        <img src="img/img-courses/css-3-logo-1.png" alt="">
+                        <h3>Curso CSS3</h3>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block btn-toggle">Saber Mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul style="list-style-type: none;">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Cursos</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul style="list-style-type: none;">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Cursos</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Sobre</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center">
+                        <a class="text-white" href="">www.courses.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#init_animate').on('click', function(){
+
+                $('.logo').animate({
+                    marginTop: '+=90px'
+                }).delay(500) //podemos usar o método delay() para darmos uma pausa na ocorrência das animações
+                .animate({
+                    marginLeft: '+=100px'
+                }).queue(function(){ //esse método permite que essa animação seja executada a anterior
+                    $('h1').text('Animação concluída').css({
+                        'color': 'red'
+                    });
+                    $(this).dequeue();
+                })
+                .fadeOut(2000)
+
+            });
+
+            //$(element).stop(true, true); //parando uma animação
+
+            //$(element).finish(); //tbm para uma animação, tem algumas diferenças com o método stop()
+
+        });
+    </script>
+  </body>
 </html>
