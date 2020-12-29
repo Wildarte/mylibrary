@@ -688,7 +688,38 @@ if padding and line-height are not options, another solution it to use positioni
 
 
 
-((CSS Combinators))
+CSS Combinators
+
+A combinator is something that explains the relationship between the selectors.
+
+A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator
+
+There are four different combinators in CSS:
+
+ - descendant selector (space)
+ - child selector (>)
+ - adjacent sibling selector (+)
+ - general sibling selector (~)
+
+Descendant Selector
+
+The descendant selector matches all elements that are descendants of a specified element.
+
+The following example selects all <p> elements inside <div> elements:
+
+div p{
+background-color yellow;
+}
+
+
+Child Selector (>)
+
+The child selector selects all elements that are the children of a specified element.
+The following example selects all <p> elements that are children of a <div> element:
+
+Adjacent Sibling Selector (+)
+The adjacent sibling selector is used to select an element that is directly after another specific element.
+Sibling elements must have the same parent element, and "adjacent" means "immediately following".
 
 
 

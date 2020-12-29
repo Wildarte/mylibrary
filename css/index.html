@@ -245,6 +245,18 @@
                 height: 200px;
                 width: 400px;
             }
+            .descendant p{
+                color: red;
+            }
+            .child > p{
+                color: blueviolet;
+            }
+            .adjacent + p{
+                background-color: yellow;
+            }
+            .general ~ p{
+                color: chocolate;
+            }
         </style>
     </head>
     <body>
@@ -484,7 +496,41 @@
             <p>I am vertically and horizontally centered.</p>
         </div>
 
+        <h3>CSS  Combinators</h3>
 
+        <h4>Descendant Selector (space)</h4>
+
+        <div class="descendant">
+            <p>Aqui é um exemplo com descendant selector</p>
+        </div>
+
+        <h4>Child Selector (>)</h4>
+
+        <div class="child">
+            <p>Aqui é um examplo com child selector</p>
+            <p>Aqui é um examplo com child selector</p>
+            <p>Aqui é um examplo com child selector</p>
+            <p>Aqui é um examplo com child selector</p>
+        </div>
+
+        <h4>Adjacent Sibling Selector (+)</h4>
+
+        <div class="adjacent">
+            <p>Aqui é um examplo com adjacent sibling selector</p>
+            <p>Aqui é um examplo com adjacent sibling selector</p>
+        </div>
+        <p>Aqui é um examplo com adjacent sibling selector</p>
+        <p>Aqui é um examplo com adjacent sibling selector</p>
+
+        <h4>General Siblings Selector (~)</h4>
+
+        <div class="general">
+            <p>Aqui é um examplo com General sibling selector</p>
+        </div>
+        <p>Aqui é um examplo com General sibling selector</p>
+        <p>Aqui é um examplo com General sibling selector</p>
+        <p>Aqui é um examplo com General sibling selector</p>
+        <p>Aqui é um examplo com General sibling selector</p>
 
         <br>
         <br>
