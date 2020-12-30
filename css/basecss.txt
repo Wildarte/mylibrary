@@ -720,11 +720,146 @@ The following example selects all <p> elements that are children of a <div> elem
 Adjacent Sibling Selector (+)
 The adjacent sibling selector is used to select an element that is directly after another specific element.
 Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+The following example selects the first <p> element that are placed immediately after <div> elements:
+
+
+General Sibling Selector (~)
+
+The general sibling selector selects all elements that are siblings of a specified element.
+
+The following example selects all <p> elements that are siblings of <div> elements:
 
 
 
+CSS Pseudo-classes
+
+What are Pseu-classes?
+
+A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+
+ - style an element when a user mouses over it
+ - style visited and unvisited links differently
+ - style an element when it gets focus
 
 
+Syntax
+
+The syntax of pseudo-classes:
+
+selector:pseudo-class{
+    property: value;
+}
 
 
+CSS - The :first-child Pseudo-class
 
+The :first-child pseudo-class matches, a specified element that is the first child of another element.
+
+Match the first <p> element
+
+In the following example, the selector matches any <p> element that is the first child of any element:
+
+
+CSS - The :lang Pseudo-class
+
+the :lang pseudo-class allows you to special rules for different languages.
+
+In the example below, :lang defines the quotation marks for <p> elements with lang="no";
+
+CSS Pseudo-elements
+
+What are Pseuco-Elements?
+
+A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+
+ - Style the first letter, or line, of an element
+ - Insert content before, or after, the content of an element
+
+Syntax
+
+The syntax of pseudo-element:
+
+selector::pseudo-element {
+    property: value;
+}
+
+The ::first-line Pseudo-element is used to add a special style to the first line of a text
+
+The following example formats the first line of the text in all <p> elements:
+
+Ex:
+
+p::first-line{
+    color: #ff0000;
+    font-variant: small-caps;
+}
+
+Note: The ::first-line pseudo-element can only be applied to block-level elements.
+
+the following properties apply to the ::first-line pseudo-element:
+
+Notice the double colon notation - ::first-line versus :first-line
+
+the double colon replaced the single-colon notation for pseudo-elements in CSS3. This was can attempt form W3C to distinguish between pseudo-classes and pseudo-elements.
+
+The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.
+
+For backward compatibility, the single-colon syntax is accepctable for CSS2 and CSS1 pseudo-elements.
+
+The ::first-letter Pseudo-element
+
+The ::first-letter pseudo-element is used to add a special style to the first letter of a text.
+The following example formats the first letter of the text in all <p> elements:
+
+The ::first-letter pseudo-element can only be applied to block-level elements.
+
+Pseudo-elements and CSS Classes
+
+pseudo-elements can be combined with CSS classes:
+
+p.into::first-letter{
+color: #ff0000;
+font-size: 200%;
+}
+
+we can to use multiple pseudo-element
+
+Ex:
+
+p::first-letter{
+ color: #ff0000;
+ font-size: xx-large;
+}
+
+p::first-line{
+ color: #0000ff;
+ font-variant: small-caps;
+}
+
+
+CSS - The ::before Pseudo-element
+
+The ::before pseudo-element can be used to insert some content before the content of an element.
+The following example inserts an image before the content of each <h1> element:
+
+CSS - The ::after Pseudo-element
+
+The::after pseudo-element can be used to insert some content after the content of an element.
+The following example inserts an image after the content of each <h1> element:
+
+h1::after{
+    content: url('image.jpg');
+}
+
+CSS - The - ::selection pseudo-element
+The ::selection pseudo-element matches the portion of an element that is select by a user.
+
+The following CSS properties can be applied to ::selection: color, background, cursor, and outline.
+
+The following example makes the selected text red on a yellow background:
+
+((Opacity))

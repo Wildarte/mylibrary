@@ -257,10 +257,93 @@
             .general ~ p{
                 color: chocolate;
             }
+
+            /* manipulation over of stats of the links */
+            a:link{
+                color: blueviolet;
+            }
+            a:visited{
+                color:cyan;
+            }
+            a:hover{
+                color: yellow;
+            }
+            a:active{
+                color:brown;
+            }
+            a.highlight:link{
+                color: darkblue;
+            }
+            a.highlight:visited{
+                color: darkgreen;
+            }
+            a.highlight:hover {
+                color: fuchsia;
+            }
+            .wild-tooltip span{
+                display: none;
+                border: 1px solid #999;
+                background-color: #ccc;
+                color: #000;
+                padding: 5px;
+                cursor: no-drop;
+            }
+            .wild-tooltip:hover span{
+                display: inline;
+                z-index: 100;
+            }
+            .wild-tooltip:hover{
+                cursor: no-drop;
+            }
+            ul.child li:first-child {
+                color: lightcoral;
+            }
+            div.child2 p:first-child i{
+                color: #7ab;
+            }
+            q:lang(no) {
+                quotes: "~" "~";
+            }
+            .wild-form input:focus{
+                background-color: #fff;
+                outline-style: none;
+                box-shadow: 0px 0px 3px 3px darkred;
+                transition: box-shadow 0.2s;
+            }
+            .wild-form input{
+                display: block;
+                color: #454545;
+                font-size: 16px;
+                padding: 10px;
+                border: 1px solid #aaa;
+                border-radius: 5px;
+            }
+            .pseudo-first-line::first-line{
+                color: darkred;
+            }
+            .pseudo-first-letter::first-letter{
+                font-size: 50px;
+            }
+            .pseudo-first-letter{
+                color: #000!important;
+            }
+            p.intro::first-letter{
+                font-size: 60px;
+                text-shadow: 2px 2px 5px red;
+            }
+            .pseudo-before::before{
+                content: url('https://images.unsplash.com/photo-1595537696535-c58dab6c1437?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+                overflow: auto;
+                display: block;
+            }
+            ::selection{
+                color: white;
+                background-color: black;
+            }
         </style>
     </head>
     <body>
-        <h1 class="font-effect-fire">Titulo</h1>
+        <h1 class="font-effect-fire">Título</h1>
         <hr>
         <h2 class="sticky">Este elemento usa o position: sticky</h2>
         <hr>
@@ -531,6 +614,71 @@
         <p>Aqui é um examplo com General sibling selector</p>
         <p>Aqui é um examplo com General sibling selector</p>
         <p>Aqui é um examplo com General sibling selector</p>
+
+        <hr>
+
+        <h3>CSS Pseudo-classes</h3>
+
+        <ul class="unvisited">
+            <li><a class="highlight" href="#" target="_blank">Link 1</a></li>
+            <li><a href="#" target="_blank">Link 2</a></li>
+            <li><a href="#" target="_blank">Link 3</a></li>
+            <li><a href="#" target="_blank">Link 4</a></li>
+            <li><a href="#" target="_blank">Link 5</a></li>
+        </ul>
+
+        <h4>Meu prório tooltip</h4>
+        <p class="wild-tooltip">Passe o mouse aqui
+            <span>Esse é um tooltip</span>
+        </p>
+
+        <h4>CSS - :first-child Pseudo-class</h4>
+
+        <ul class="child">
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <li> Item 3 </li>
+            <li> Item 4  </li>
+        </ul>
+
+        <div class="child2">
+            <p>Lorem ipsum dolor <i>simple text</i> sit amet consectetur <i>simple text</i> adipisicing elit.</p>
+            <p>Lorem ipsum dolor <i>simple text</i> sit amet consectetur <i>simple text</i> adipisicing elit.</p>
+        </div>
+
+        <h4>CSS - :lang Pseudo-class</h4>
+
+        <p>Some text only for me to try <q lang="no">A quote in a paragraph</q> just this</p>
+
+        <form action="" class="wild-form">
+            <label for="primeiro-nome">Primeiro Nome</label>
+            <input type="text" name="" id="" placeholder="Coloque seu nome">
+            <label for="segundo-nome">Segundo Nome</label>
+            <input type="text" name="" id="" placeholder="Sobre nome">
+        </form>
+
+        <hr>
+
+        <h3>Pseudo element</h3>
+
+        <div>
+            <small>On the case below just the first line is different, because the pseudo ::first-line</small>
+            <p class="pseudo-first-line">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt reiciendis, quos minus ex iste molestias minima maxime corrupti ipsa provident corporis accusantium quibusdam consequuntur odit, ducimus quia facere illum sapiente!</p>
+        </div>
+
+        <small>::first-letter</small>
+
+        <p class="pseudo-first-letter">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia repudiandae necessitatibus eligendi consequatur repellendus ipsam et aut. Voluptate nam aliquid maiores corporis! Non corrupti a molestiae? Quaerat maxime qui quisquam?</p>
+
+        <small>pseudo-element and css classes</small>
+        
+        <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, cupiditate ea facere corporis, dolorum commodi eligendi a minus eveniet culpa cumque. Magnam nemo nisi consequatur reprehenderit, placeat sunt sed minus.</p>
+
+        <small>::before Pseudo-element</small>
+
+        <h1 class="pseudo-before">Text as example in this case</h1>
+
+        <small>Também é possível usar o CSS para modificar um elemento que o usuário tenha selecionado com o pseudo-elemento ::selection</small>
 
         <br>
         <br>
