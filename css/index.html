@@ -101,6 +101,8 @@
                 border: 2px solid green;
             }
             h2.sticky{
+                box-sizing: border-box;
+                box-shadow: 2px 2px 10px black;
                 background-color: lightgreen;
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 text-shadow: none;
@@ -112,6 +114,7 @@
                 border: 2px solid green;
                 position: sticky; /* o sticky permite que o elemente fique fixo na tela quando for rolado o scroll */
                 top: 0; /* ai precisamo definir o top como 0 para que quando o scroll for rolado o elemento fique positionado no top com zero de distancia entre o elemento e o topo*/
+                z-index: 1;
             }
             div.container{
                 position: relative;
@@ -340,9 +343,71 @@
                 color: white;
                 background-color: black;
             }
+            .img-opacity{
+                box-sizing: border-box;
+                border: 1px solid #bbb;
+                border-radius: 5px;
+                margin: 0 auto;
+                padding: 5px;
+                width: 33.33%;
+                opacity: 0.7;
+                float: left;
+            }
+            .img-opacity:hover{
+                opacity: 1;
+                transition: opacity 0.5s;
+            }
+            .wild-box-image{
+                border: 2px solid black;
+                margin: 0 auto;
+                padding: 50px;
+                background-image: url('https://images.unsplash.com/photo-1539681607322-8e907b3682aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+                background-repeat: no-repeat;
+                background-size: cover;
+                clear: both;
+            }
+            .wild-box-image-content{
+                background: rgba(230, 230, 230, 0.5);
+                padding: 30px;
+                border: 1px solid black;
+            }
+            ul.wild-nav{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 200px;
+            }
+            ul.wild-nav a{
+                background-color: #434343;
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                padding: 10px;
+                text-align: center;
+            }
+            ul.wild-nav a:hover{
+                background-color: #fff;
+                color: #434343;
+            }
+            ul.wild-nav li .active{
+                background-color: #bbb;
+                color: #444;
+            }
+            ul.wild-nav-horizontal{
+                background-color: #434343;
+                margin: 0;
+                padding: 0;
+            }
+            ul.wild-nav-horizontal li{
+                display: inline;
+            }
+            ul.wild-nav-horizontal li a{
+                padding: 10px;
+                text-decoration: none;
+            }
         </style>
     </head>
-    <body>
+    <body style="margin: 0; padding: 0;">
         <h1 class="font-effect-fire">Título</h1>
         <hr>
         <h2 class="sticky">Este elemento usa o position: sticky</h2>
@@ -679,6 +744,46 @@
         <h1 class="pseudo-before">Text as example in this case</h1>
 
         <small>Também é possível usar o CSS para modificar um elemento que o usuário tenha selecionado com o pseudo-elemento ::selection</small>
+
+        <hr>
+
+        <h3>CSS Opacity property</h3>
+
+        <h4>Imagens with opacity property</h4>
+
+        <img class="img-opacity" src="https://images.unsplash.com/photo-1599515308081-3c60ed5f96ad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+
+        <img class="img-opacity" src="https://images.unsplash.com/photo-1596969650378-b2b3a6a5e3ec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+
+        <img class="img-opacity" src="https://images.unsplash.com/photo-1510428506697-e9b71944d590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+
+        <div class="wild-box-image">
+            <div class="wild-box-image-content">
+                <h3>This is some text that is placed in the transparent box</h3>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3>Navigation Bars</h3>
+
+        <small>vertical navbar</small>
+        <ul class="wild-nav">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+
+        <small>horizontal navbar</small>
+        <ul class="wild-nav-horizontal">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
 
         <br>
         <br>

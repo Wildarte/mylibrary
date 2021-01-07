@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul.wild-nav-horizontal{
+            list-style-type: none;
+            background-color: #343434;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 2px 2px 10px black;
+            width: 100%;
+            top: 0;
+            position: fixed;
+        }
+        ul.wild-nav-horizontal li a{
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
+        }
+        ul.wild-nav-horizontal li{
+            float: left;
+        }
+        ul.wild-nav-horizontal li:hover{
+            background-color: #000;
+        }
+
+
+        /*nav 2*/
+        ul.wild-nav-horizontal-2{
+            background-color: #343434;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        ul.wild-nav-horizontal-2 li{
+            float: left;
+        }
+        ul.wild-nav-horizontal-2 li a{
+            padding: 8px;
+            display: block;
+            text-decoration: none;
+            color: #fff;
+        }
+        ul.wild-nav-horizontal-2 .wild-nav-faq{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="wild-nav-horizontal">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+        <li style="float: right"><a href="#">FAQ</a></li>
+    </ul>
+
+    <hr style="border: 2px; clear: both;">
+
+    <ul class="wild-nav-horizontal-2" style="margin-top: 100px">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+
+</body>
+</html>

@@ -862,4 +862,118 @@ The following CSS properties can be applied to ::selection: color, background, c
 
 The following example makes the selected text red on a yellow background:
 
-((Opacity))
+CSS Opacity - transparency
+
+the opacity property specifies the opacity/transparency of an element.
+
+Transparent Image
+
+The opacity property can take a value from 0.0 - 1.0 The lower value, the more transparent:
+
+img{
+opacity: 0.5;
+}
+
+Transparente Hover Effect
+
+The opactity property is often used together with the :hover selector to change the opacity on mouse-over:
+
+
+
+Example explained
+
+The first css block is similar to the code in example 1. In addition, we have added what should happen when a user hovers over one of the images. In this case we want the image to not be transparent when the user hovers over it. The CSS for this is opacity: 1;
+
+When the mouse pointer moves away from the image, the image will be transparet again.
+
+An example of reversed hover effect:
+
+
+Transparent Box
+
+When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read:
+
+Transparency using RGBA
+
+If you do not want to apply opacity to child elements, like in our example above, use RGBA color values. The following example sets the opacity for the background color and not the text:
+
+you learned form our css color chapter, that you can use RGB as a color value. In addition to RGB, you can use a RGB color value with an alpha channel (RGBA) - which specifies the opacity for a color.
+
+An RGBA color value is specified with: RBGA(Red, Blue, Green, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+
+Tip: You will learn more about RGBA Colors in our CSS Color Chapter.
+
+
+
+CSS Navigation Bar
+
+Navigation Bars
+
+Having easy-to-use navigation is important for any web site.
+
+With CSS you can transform boring HTML menus into good-looking navigation bars.
+
+navigation Bar = list of links
+
+a navigation bar needs standard HTML as a base.
+
+in our examples we eill buld the navigation bar from a standard HTML list.
+
+A navigation bar is basically a list of links, so using the <u> and <li> elements makes perfect sense:
+
+vertical navigation bar
+
+to build a vertical navigation bar, you can style the <a> elements inside the list, in addition to the code from the previous page:
+
+
+horizonal navigation bar
+
+there are two ways to create a horizontal navigation bar. using inline of floating list items.
+
+inline list items
+
+one way to build a horizontal navigation bar is to specify the <li> elements as inline, in addition to the "standard" code from the previous page:
+
+
+CSS Dropdowns
+
+create a hoverable dropdown with css
+
+Basic Dropdown
+
+create s dropdown box that appears when the user moves the mouse over an element
+
+
+
+Example Explained
+
+html) use any element to open the dropdown content, e.g.a <span>, or a <button> element.
+
+use a container element (like <div>) to create the dropdown content and add whatever you want inside of it.
+
+Wrap a <div> element around the elements to position the dropdown content correctly with CSS.
+
+CSS) the .dropdown class uses position: relative, which is needed when we want the dropdown content to be placed right below the dropdown button (using position: absolute).
+
+The .dropdown-content class holds the actual dropdown content. It is hidden by default, and will be displayed on hover (see below). Note the min-width is set to 160px. Feel free to change this. Tip: If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100% (and overflow: auto to enable scroll screens).
+
+Instead of using  a border, we have used the CSS box-shadow property to make the dropdown menu look like a "card".
+
+The :hover selector is used to show the dropdown menu when the user moves the mouse over the dropdown button.
+
+
+
+
+Dropdown Menu
+
+Create a dropdown menu that allows the user to choose an option from a list:
+
+This example is similar to the previous one, except that we add links the dropdown box and style them to fit a styled dropdown button:
+
+
+
+Right-aligned Dropdown Content
+
+if you want the dropdown menu to go from right, instead of left to right, add right: 0;
+
+

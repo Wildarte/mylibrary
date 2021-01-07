@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+
+    <style>
+        
+        .dropdown{
+            position: relative; /*the element is positioned relative to its normal position, so "left: 20px" adds 20 pixels to the element's LEFT position*/
+            display: inline-block;
+        }
+        
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+            opacity: 1;
+            transition: opacity 1s;
+        }
+
+        /*aqui é o dropdown*/
+
+        /*style the dropdown button*/
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* The container <div> - needed to position the dropdown content*/
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+
+        /*dropdown content (hidden by default)*/
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+
+        /*links inside the dropdown*/
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+
+
+
+        /*aqui são os dois*/
+        .dropbtn2{
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown2{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content2{
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content2 a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content2 a:hover{
+            background-color: #f1f1f1;
+        }
+        .dropdown2:hover .dropdown-content2{
+            display: block;
+        }
+        .dropdown2:hover .dropbtn{
+            background-color: #3e8e41;
+        }
+
+
+
+        /*Esse é um código que tentei fazer sozinho de um dropdown que exibe uma imagem*/
+        .dropdown-content-img{
+            display: none;
+            position: absolute;
+            border: none;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-img{
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-img p{
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-img:hover .dropdown-content-img{
+            display: block;
+        }
+
+        .desc-img{
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        /*aqui é o código do navbar com dropdown*/
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li.nav-item {
+            float: left;
+        }
+
+        li.nav-item a, .dropbtn3 {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li.nav-item a:hover, .dropdown3:hover .dropbtn3 {
+            background-color: red;
+        }
+
+        li.dropdown3 {
+            display: inline-block;
+        }
+
+        .dropdown-content3 {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content3 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content3 a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown3:hover .dropdown-content3 {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p>Hello World</p>
+        </div>
+    </div>
+    
+    <hr>
+
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="dropdown2" style="float: left;">
+        <button class="dropbtn2">left</button>
+        <div class="dropdown-content2" style="left: 0">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    
+    <div class="dropdown2" style="float: right;">
+        <button class="dropbtn2">left</button>
+        <div class="dropdown-content2">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <br style="clear: both;">
+
+    <h3>dropdown com imagens</h3>
+
+    <div class="dropdown-img" style="clear: both;">
+        <p>Paradaise</p>
+        <img src="https://images.unsplash.com/photo-1510428506697-e9b71944d590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" width="100">
+        <div class="dropdown-content-img">
+            <img src="https://images.unsplash.com/photo-1510428506697-e9b71944d590?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" width="400">
+            <div class="desc-img">
+                <h3 class="dropdown-img-title">Paradaise</h3>
+                <h4 class="dropdown-img-desc">Ilha paradisiáco com pousada e área de entretenimento</h4>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>navbar com dropdown</h3>
+
+    <ul class="nav">
+        <li class="nav-item"><a href="#home">Home</a></li>
+        <li class="nav-item"><a href="#news">News</a></li>
+        <li class="dropdown3">
+          <a href="javascript:void(0)" class="dropbtn3">Dropdown</a>
+          <div class="dropdown-content3">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+    </ul>
+
+</body>
+</html>

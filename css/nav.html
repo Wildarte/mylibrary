@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        ul.wild-nav{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+            background-color: #434343;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            
+        }
+        ul.wild-nav li a{
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 16px;
+            display: block;
+        }
+        ul.wild-nav li a:hover{
+            background-color:#eee;
+            color: #000;
+        }
+        section{
+            margin-left: 20%;
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="wild-nav">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+
+    <div style="margin-left:20%;padding:1px 16px;height:1000px;">
+        <h2>Fixed Full-height Side Nav</h2>
+        <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+        <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+        <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+      </div>
+
+</body>
+</html>
