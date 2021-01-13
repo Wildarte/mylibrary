@@ -977,3 +977,15 @@ Right-aligned Dropdown Content
 if you want the dropdown menu to go from right, instead of left to right, add right: 0;
 
 
+
+
+CSS Image Gallery
+
+
+CSS can be used to create an image gallery
+
+Image Gallery
+
+The following image gallery is created with CSS:
+
+
