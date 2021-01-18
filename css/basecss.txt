@@ -989,3 +989,109 @@ Image Gallery
 The following image gallery is created with CSS:
 
 
+
+CSS Image Sprites
+
+Image Sprites
+
+An image sprite is a collection of images put into a single image.
+A web page with many images can take a long time to load and generates multiple server requests.
+Using image sprites will reduce the number of server requests and save bandwidth
+
+
+Image Sprites - Simple Example
+
+Instead o using there separate images, we use this single image ("img_navsprite.gif"):
+
+With CSS, we can show just the part of the image we need.
+In the following example the CSS specifies which part of the "img_navsprites.gif" image to show:
+
+.home{
+  width: 46px;
+  height: 44px;
+  background: url(img_navsprites.gif) 0 0;
+}
+
+
+
+CSS Attr Slectors
+
+Style html elements with specific attributes
+
+it is possible to style html elements that have specific or attributes or values.
+
+
+
+CSS [attribute] Selector
+
+The [attribute] selector is used to select elements with a specified attribute.
+The following example selects all <a> elements with a target attribute:
+
+
+a[target]{
+  background-color: yellow;
+}
+
+CSS [attribute="value"] Selector
+
+The [attribute="value"] selector is used to select elements with a specified attribute and value.
+The following example selects all <a> elements with a target="_blank" attribute:
+
+a[target="_blank"]{
+  background-color: yellow;
+}
+
+
+Ex:
+
+[title~="flower"]{
+  border: 5px solid yellow;
+}
+
+
+The example above will match elements with title="flower", title="summer flower", and title="flower new", but not title="my-flower" or title="flowers".
+
+
+
+CSS [atribute~="value"] Selector
+
+The [attribute~="value" selector is used to select elements with an attribute value containing a specified word.
+
+The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
+
+
+[title~="flower"]{
+  border: 5px solid yellow;
+}
+
+
+
+CSS [attribute|="value"] Selector
+
+The [attribute|="value" selector is used to select elements with the specified attribute starting with the specified value.
+The following example selects all elements with a class attribute value that begins with "top":
+
+Note: The value has to be a whole word, either alone, like class="top", or followed by a hypen(-), like class="top-text"!
+
+[class|="top"]{
+  background: yellow;
+}
+
+styling forms
+
+The attribute selectors can be useful for styling forms without class or ID:
+
+input[type="text"]{
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+input[type="button"]{
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+
+((Forms))

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute</title>
+    <style>
+        h2[title="titulo"]{
+            color: red;
+        }
+        [title="p"]{
+            color: green;
+        }
+        [class|="title"]{
+            background: greenyellow;
+        }
+        [class^="title"]{
+            background: hotpink;
+        }
+        [class$="one"]{
+            background: brown
+        }
+        [class*="t"]{
+            color: gold;
+        }
+        input[type="text"]{
+            background-color: gray;
+            padding: 10px;
+            border: 1px solid #666;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Utilizando css attribute selector</h3>
+
+    <p>Podemos usar o attribute selector do CSS da seguinte forma: tag[attribute="value"] <br>
+        Exemplo:<br>
+        <pre>
+            h2[title="titulo"]{
+                color: red
+            }
+        </pre>
+        Dessa forma como exemplo acima mostra todo h2 que tiver um atributo title com escrito "titulo", ficará com a cor vermelha
+    </p>
+    
+    <h2 title="titulo" class="titletwo">Aqui é apenas um título</h2>
+    <hr>
+    <p title="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur soluta repellat sapiente provident voluptatum corrupti iusto beatae quae consequatur, vero delectus, neque maxime dolores. Molestiae, similique nam. Sint, officia voluptas.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad ab, nam sapiente adipisci est. Fugiat dicta debitis aut doloribus consequuntur quidem, neque ratione eveniet. Distinctio fuga repellendus vel laboriosam.</p>
+    <h2 class="titleone">Aqui é apenas mais um título</h2>
+    <hr>
+    <p>Cuidado, você pode estar entrando em uma zona perigosa, permaneça atento e não clique em nada. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure totam aliquid beatae reiciendis id sunt, neque quae tempore, alias in nihil sint tenetur soluta quidem. Unde adipisci perspiciatis facere.</p>
+    <h2 class="titlethree">Aqui é apenas um título</h2>
+
+    <hr>
+
+    <form action="">
+        <input type="text" name="" id="">
+        <input type="checkbox" name="" id="">
+        <input type="email" name="" id="">
+        <input type="submit" name="" id="">
+    </form>
+
+</body>
+</html>
