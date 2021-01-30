@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout basic</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background: rgb(200, 200, 200);
+            text-align: center;
+            padding: 30px;
+        }
+
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+        }
+        .topnav a{
+            float: left;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 15px;
+            text-align: center;
+            display: block;
+        }
+        .topnav a:hover{
+            background-color: #ddd;
+            color: #333
+        }
+
+        section::after{
+            display: table;
+            clear: both;
+            content: "";
+        }
+        .column{
+            float: left;
+            width: 33.33%;
+        }
+
+        @media screen and (max-width: 600px){
+            .column{
+                width: 100%
+            }
+        }
+
+        footer{
+            background-color: #ddd;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>Header</header>
+
+    <nav class="topnav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </nav>
+
+    <section class="section">
+        <div class="column">
+            <h2>column</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+        </div>
+        <div class="column">
+            <h2>column</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+        </div>
+        <div class="column">
+            <h2>column</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor modi cum cupiditate enim. Debitis fugit nihil error eius facilis, aspernatur dicta, libero distinctio amet hic aperiam officiis cumque repellat!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

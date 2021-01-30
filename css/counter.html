@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counters</title>
+    <style>
+        .counter-first{
+            counter-reset: section;
+        }
+        .counter-first h2::before{
+            counter-increment: section;
+            content: "Section "counter(section)": ";
+        }
+        .counter-second{
+            counter-reset: section;
+        }
+        .counter-second h3::before{
+            counter-increment: section;
+            content: "Section "counter(section)": ";
+        }
+        .counter-third{
+            counter-reset: count;
+        }
+        .counter-third *::before{
+            counter-increment: count;
+            content: "Seção "counter(count)": ";
+        }
+
+        body{
+            counter-reset: secao;
+        }
+        h1{
+            counter-reset: subsecao;
+        }
+        h1::before{
+            counter-increment: secao;
+            content: "Seção "counter(secao)" ";
+        }
+        h2::before{
+            counter-increment: subsecao;
+            content: "Seção "counter(secao)"."counter(subsecao)" ";
+        }
+
+        ol{
+            counter-reset: item;
+            list-style-type: none;
+        }
+        li::before{
+            counter-increment: item;
+            content: counters(item, ".")" "; /*usamos o counters para adionar aos elementos filhos*/
+        }
+    </style>
+</head>
+<body>
+    <!-- o counter e seus dderivados funcionam como vairaveis que podemos incremente e/ou contar, como nesse exemplo. Aqui estamos usando -->
+    <div class="counter-first">
+        <h2>This is a first h2 element</h2>
+        <h2>Here is another content</h2>
+        <h2>Here is another content with a head</h2>    
+    </div>
+    
+    <div class="counter-second">
+        <h3>Content for studies in another country</h3>
+        <h3>Content for studies in another country</h3>
+        <h3>Content for studies in another country</h3>
+        <h3>Content for studies in another country</h3>
+    </div>
+
+    <div class="counter-third">
+        <h4>Content that is show in the h2 element</h4>
+        <h4>Content that is show in the h2 element</h4>
+        <h4>Content that is show in the h2 element</h4>
+        <h4>Content that is show in the h2 element</h4>
+        <h4>Content that is show in the h2 element</h4>
+        <h4>Content that is show in the h2 element</h4>
+    </div>
+
+    <hr>
+
+    <h1>html tutorials:</h1>
+    <h2>html tutorials</h2>
+    <h2>css tutorial</h2>
+
+    <h1>scripting tutorials</h1>
+    <h2>JavaScript</h2>
+    <h2>VBScript</h2>
+
+    <h1>xml tutorials</h1>
+    <h2>xml</h2>
+    <h2>xsl</h2>
+
+    <hr>
+
+    <ol>
+        <li>item</li>
+        <li>item
+        <ol>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ol>
+            <li>item</li>
+        </ol>
+        <li>item</li>
+        <li>item</li>
+    </ol>
+
+</body>
+</html>

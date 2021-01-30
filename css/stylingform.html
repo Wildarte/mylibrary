@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling form</title>
+    <style>
+        input[type=text]{
+            width: 100%;
+        }
+        input[type=email]{
+            width: 50%;
+        }
+
+        input[type=url]{
+            padding: 10px;
+            margin: 8x 0;
+            box-sizing: border-box;
+        }
+        input[type=number]{
+            padding: 10px;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+        input[type=number]:focus{
+            border: 2px solid #72fa12;
+            outline: none;
+        }
+        input[type=search]{
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('101791-200.png');
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text"><br>
+        <input type="email"><br>
+    </form>
+
+    <hr>
+
+    <h3>Other form</h3>
+
+    <form action="">
+        <input type="url" name="" id="">
+        <input type="number">
+    </form>
+<hr>
+    <form action="">
+        <input type="search">
+    </form>
+
+</body>
+</html>

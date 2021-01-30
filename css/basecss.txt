@@ -1094,4 +1094,209 @@ input[type="button"]{
   display: block;
 }
 
-((Forms))
+
+
+CSS Forms
+
+
+The look of an html form can e greatly improved with CSS:
+
+
+styling input fields
+
+Use the width property to determine the width of the input field:
+
+First Name
+
+
+
+Padded Inputs
+
+Use the padding property to add space inside the text field.
+
+Tip: When you have many inputs after each other, you might also want to add some margin, to add more space outside of them
+
+
+Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are include in the total width and height of the elements.
+Read more about the box-sizing property in our CSS Box Sizing Chapter.
+
+
+Bordered Inputs
+
+
+Use the border property to change the brder size and color, and use the border-radius property to add rouded corners:
+
+
+
+Focused Inputs
+
+By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can remove this behavior by adding outline: none; to the  input.
+
+Use the :focus selectod
+
+
+input with icon/image
+If you want an icon inside the input, use the background-image property and position it with the background-position property. Also notice that we add a large left padding to reserve the space of the icon:
+
+
+e tem muitos outros styles possível no input
+
+
+Counters
+
+css counters are 'variables' maintained by css hose values can be incremented by css rules (to track how many times they are used). Counters let you adjust the appearance of content based on its placement i the document.
+
+
+Automatic Numbering With Counters
+
+css counters are like 'variables'. The variable values can be incremented by css rules (which will track how many times they are used).
+
+To work with css counters we will use the following properties:
+
+ - counter - reset - creates or resets a ounter
+ - counter - increment - increments a counter value
+ - content - inserts generated content
+ - counter() or counters() function - Adds the value of a content to an element
+
+To use a CSS counter, it must first be created with counter - reset.
+
+The following example creates a counter for the page (in the body selector), then increments the counter value for each <h2> element and adds "Section <value of the counter>:" to the beginning of each <h2>
+
+
+Nesting Counters
+
+The following example creats one counter for the page (section) and one counter for each <h1> element (subsection). The "section" counter will be counted for each <h1> element with "Section <value of the section counter>.", and the "subsection" counter will be counted for each <h2> element with "<value of the section counter>.<value of the subsection counter>":
+
+
+
+A counter can also be useful to make outlined lists because a new instance of a counter is automatically created in child elements.
+Here we use the counters()) function to insert a string between different levels of nested counters:
+
+
+css website layout
+
+website layout
+
+a website is often divided into headers, menus, content and footer:
+
+There are tons of different layout designs to choose from. However, the structure above, is one of the most common, and we will take a closer lool at it in this tutorial.
+
+
+Header
+
+A header is usually located at the top of the website (or right below a top navigation menu). It often contains a logo or the website name
+
+
+
+CSS Units
+
+css has several different units for expressing a length.
+
+Many css properties take "lenght" values, such as width, margin, padding, font-size, etc.
+
+Lenght is a number followed by a length unit, such as 10px, 2em, etc.
+
+
+
+Note: a whitespace cannot appear between the number and the unit. However, if the values is 0, the unit can be omitted.
+
+For some css properties, negative lengths are allowed.
+
+There are two types of length units: absolute and relative
+
+
+Absolute lengths
+
+The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+
+Absolute length units are not recommended for use on screen, because screen, because screen sizez vary so much. However, they can be used if the output medium is known, such as for print layout.
+
+cm = centimeters
+mm = millimeters
+in = inches(1in = 96px = 2.54cm)
+px = pixels
+pt = points
+pc = picas
+
+
+
+Relative Lengths
+
+em = Relative to the front-size of the element (2m means 2 times the size of the current front)
+ex = Relative to the x-height of the current font (rarely used)
+ch = relative to eidth of the 0 (zero)
+rem = Relative to font-size of the root element
+vw = Relative to 1% of the width of the viewport
+vh = Relative tp 1% of the height of the viewport
+vmin = Relative to 1% viewports larger dimension
+vmax = Relative to 1% of viewports larger dimension
+% = relative to the parent element
+
+
+
+CSS Specificity
+
+what is Specificity?
+
+if there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.
+
+Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.
+
+The universal selector (*) has low specificity, while ID selectors are highly specific!
+
+Specificity hierarchy. There are four categories which define the specificity level of a selector:
+
+Inline styles - An inline style is attached directly to the element to be styled. Example
+
+
+O que é especificidade CSS
+
+Se houver duas ou mais regras css conflitantes o navegador segue algumas regras e determina qual é a mais especifica.
+
+Pense em especifidade como um pontuação ou ranqueamento que determina quais declarações de estilo são aplicadas a um elemento.
+
+o seletor unversal (*) tem baixa especifidade enquanto os seletores de ID são altamente específicos.
+
+
+Existem 4 hierarquias que determinam o nível de especificidade de um seletor
+
+estilos embutidos: esse é anexado diretamente ao elemento a ser utilizado
+
+IDs = um id é um identificador exclusivo para os elementos da página, como #navbar.
+
+Classes, atributos e pseudoclasses: essa categoria inclui .classes, [atributos] e pseudoclasses como: hover, focus etc.
+
+Elementos e pseudoelementos: Essa categoria inclui nomes de elementos e pseudoelementos, como h1, div, :before e :after
+
+um seletor de classe vence qualquer numero de seletores de elemento, um seletor de classe como .intro bate em seletores de elemento como: h1, p, div, etc:
+
+.intro{
+color: red;
+}
+
+h1{
+color: yellow;
+}
+
+<h1 class="intro">Hello World!</h1>
+
+no caso de cima seletor de classe será aplicado
+
+
+ID selectors have a higher specificity than attribute selectors - Lool at the following three code lines:
+
+div#a{
+  background-color: green;
+}
+#a{
+  background-color: yellow;
+}
+div[id=a]{
+  background-color: blue;
+}
+
+The first rule is more specific than the other two, and will be applied.
+
+
+
+((CSS Advanced))
