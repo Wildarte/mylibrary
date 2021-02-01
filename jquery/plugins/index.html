@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugins jQuery</title>
+</head>
+<body>
+    
+    <h1>hcode treinamentos</h1>
+
+    <h2>seção de Plugins</h2>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    
+
+    <script>
+
+        /*aqui nós criamos um Plugin
+        $.fn.changeText = function(){
+
+            this.css('fontSize', '50px');
+
+            return this; //aqui é colocado o return this para que seja possível continuar fazendo uma fila de ações que é quando adicionamos várias funções consecutivas uma atrás de outra
+            
+        }
+        */
+
+        //as vezes pode acontecer de usarmos mais de uma biblioteca e ela também utilizar o dolar($), e isso pode acabar gerando algum conflitos entre as bibliotecas, então para evitar isso fazemos da seguinte forma, como no exemplo abaixo:
+
+        //fazendo igual está abaixo não tem problema de usarmos outra biblioteca que também use o dolar
+        (function($){
+
+            $.fn.changeText = function(params){
+                
+                let defaults = {
+                    fontSize: 30,
+                    color: '#ccc',
+                    fontFamily: 'Verdana'
+                }
+
+                let options = $.extend(defaults, params);
+
+                return this.each(function(){
+                    $(this).css({
+                        'fontSize': options.fontSize + 'px',
+                        'color': options.color,
+                        'fontFamily': options.fontFamily
+                    });
+                });
+            }
+
+        })(jQuery);
+
+        $(() => {
+
+            $('h1').changeText()
+
+        });
+
+    </script>
+</body>
+</html>
