@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="loaders.css">
+</head>
+<body>
+    
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <label for="">Nome</label>
+                <input type="text" placeholder="Digite seu nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" placeholder="Digite seu nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Idade</label>
+                <input type="text" placeholder="Digite seu nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Nome</label>
+                <textarea name="mensagem" id="" cols="30" rows="10" class="form-control" placeholder="Sua Mensagem..."></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar" name="submit" class="btn btn-primary form-control">
+            </div>
+        </form>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="loader.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('[type=submit]').on('click', e => {
+
+                e.preventDefault();
+
+                $('body').load();
+
+            })
+
+        });
+    </script>
+</body>
+</html>

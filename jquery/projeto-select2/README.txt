@@ -1,0 +1,1 @@
+o select2 é um plugin jquery que ajuda a estilizar ainda melhor os combobox

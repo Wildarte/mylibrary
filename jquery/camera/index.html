@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+
+.elevator .camera {
+    height: 300px;
+    position: absolute;
+    left: 22px;
+    top: 26px;
+    transform: rotateY(170deg);
+	-webkit-transform: rotateY(170deg);
+	-moz-transform: rotateY(170deg);
+	-o-transform: rotateY(170deg);
+	-ms-transform: rotateY(170deg);
+}
+
+    </style>
+</head>
+<body>
+    
+    <h3>teste camera</h3>
+
+   <div class="elevator">
+        <video class="camera" autoplay></video>
+   </div>
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="Elevator.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            window.elevator = new Elevator();
+
+        });
+
+        </script>
+</body>
+</html>
