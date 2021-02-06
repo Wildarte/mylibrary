@@ -1,0 +1,38 @@
+JavaScript Tutorial
+
+javascript os the world's most popular programming language
+Javascript is the programming language of the web.
+javascript is easy to learn
+this tutorial will teach you javascript from basic to advanced.
+
+Why study javascript?
+
+javascript is one of the 3 languages all web developers must learn:
+
+html, css, javascript
+
+
+JavaScript Output
+
+Javscript Dsiplay Possibilities
+
+javascript can "display" data in different ways:
+
+
+writing into an html element, using innerHTML.
+writing into the html output using document.write()
+writing into an alert box, using window.alert().
+writing into the browser console, using console.log()
+
+using innerHTML
+
+to access an html element, ajvascript can use the document.getElementBYId() method.
+the id attriute defines the html element. the innerHTML property defines the html content:
+
+using window.alert()
+
+window.alert()
+
+IN javascript, the window object is the global scope object, that means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional
+
+((js comments))
