@@ -1,0 +1,729 @@
+JavaScript Tutorial
+
+javascript os the world's most popular programming language
+Javascript is the programming language of the web.
+javascript is easy to learn
+this tutorial will teach you javascript from basic to advanced.
+
+Why study javascript?
+
+javascript is one of the 3 languages all web developers must learn:
+
+html, css, javascript
+
+
+JavaScript Output
+
+Javscript Dsiplay Possibilities
+
+javascript can "display" data in different ways:
+
+
+writing into an html element, using innerHTML.
+writing into the html output using document.write()
+writing into an alert box, using window.alert().
+writing into the browser console, using console.log()
+
+using innerHTML
+
+to access an html element, ajvascript can use the document.getElementBYId() method.
+the id attriute defines the html element. the innerHTML property defines the html content:
+
+using window.alert()
+
+window.alert()
+
+IN javascript, the window object is the global scope object, that means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional
+
+
+
+JS comments
+
+javascript comments can e used to explain javascript code, and to make it more readble.
+javascript comments can also be used to prevent execution, when testing alternative code.
+
+single line comments
+
+single line comments star with //
+Any text between // and the endof the line will be ignored by javascript (will not be executed).
+This example uses a single-line comment before each code line:
+
+
+Multi-line comments
+
+multi-line comments start with /* and end with */
+
+Any between /* and */ will be ignored by javascript
+
+This example uses a multi-line comment (a comment block) to explain the code:
+
+Using comments to prevent execution
+
+
+Using comments to prevent execution od code is suitable for code testing
+
+Adding //in front of a code line changes the code lines from an executable line to a comment.
+
+This example uses // to prevent of one of the code lines.
+
+
+
+JavaScript Variables
+
+JavaScript variables are containers for storing data values.
+
+In this example, x, y, and , are variables, declared with the var keyword:
+
+
+Examples:
+
+var x = 5;
+var y = 6;
+var z = x + y;
+
+
+
+From the example above, you can expect:
+
+ - x stores the value 5
+ - y stores the value 6
+ - z stores the value 11
+
+
+Using let and const (2015)
+
+Before 2015, using the var keyword was the only way to declare a javascript variable.
+
+the 2015 version of javascript (ES6 -ECMAScript 2015) allows the use of the const keyword to define a variable that cannot be reassined, and the let keyword to define a variable with restricted scope.
+
+Because it is a little complicated to describe the difference between these keyword, and because they are not supported in older browsers, the first part of this tutorial will most often use var.
+
+
+Much like algebra
+
+In this example, price1, price2, and total, are variables:
+
+In programming, just like in algebra, we use variables (like price1) to hold values.
+in programming, just like in algebra, we use variables in expressions (total = price1 + price2).
+From the example above, you can calculate the total to be 11.
+
+All Javascript variables must be identified woth unique names.
+these unique names are called identifiers.
+identifiers can be short names (like x and y) or more descriptive names (age, sum, totalValue)
+
+The general rules for constructing names for variables (unique identifiers) are:
+
+ - Names can contain letters, digits, underscores, and dollar signs.
+ - Names must begin with a letter
+ - Names can also begin with $ and _(but we will not use it in this tutorial)
+ - Names are case sensitive (y and Y are differents variables)
+ - Reserved words (like JavaScript keywords) cannot be used as names
+
+
+
+JavaScript identifiers are case-sensitive.
+
+
+The Assignment Operator
+
+In JavaScript, the equal sign (=) is an "assignment" Operator, not "equal to" operator.
+
+This is different from algebra. The following does not make sense in algebra.
+
+
+value = undefined
+
+In computer programs, variables are often declared without a value. The value can be something that has to be calculated, or something that will be provided later, like user input.
+
+A variable declared without a value will have the value undefined.
+
+The variable carName will have the value undefined after the execution off this statement:
+
+
+Re-Declaring JavaScript Variables
+
+If you re-declared a JavaScript variable, it will not lose its value.
+
+The variable carName will still have the value "Volvo" after the execution os these statements:
+
+
+
+JavaScript Dollar Sign $
+
+Remember that JavaScript identifiers (names) must begin with:
+
+
+ - A letter (A-Z or a-z)
+ - A dollar sign ($)
+ - Or an underscore (_)
+
+
+Since JavaScript treats a dollar sign as a letter, identifers containing $ are valid variable names:
+
+
+
+
+JavaScript Underscore (_)
+
+Since JavaScript treats underscore as a letter, identifiers containing_ are valid variable names:
+
+
+
+JavaScript Arithmetic
+
+
+
+JavaScript Arithmetic Operators
+
+Arithmetic operators perform arithmetic on numbers (literals or variables)
+
+
+Exponentiation
+
+The exponentiation operator (**) raises the first operand to the power of the power off the second operand.
+
+
+var x = 5;
+var z = x ** 2;
+
+x ** y produces the same result as Math.pow(x,y);
+
+
+JavaScript evaluates expressions from left to right. Different sequences can produce different results:
+
+
+Ex:
+
+var x = 16 + 4 + "Volvo";
+
+Result:
+
+20Volvo
+
+Another example:
+
+var x = "Volvo" + 16 + 4;
+
+Result:
+Volvo164
+
+
+
+JavaScript Types are Dynamic
+
+Javacript has dynamic type. This means that the same variable can be used to hold different data types:
+
+var x;
+x = 5;
+x = "John";
+
+
+JavaScript Numbers
+
+JavaScript has onl one type of numbers
+
+Numbers can be written with, or without decimals:
+
+var x1 = 34.00;
+var x2 = 34;
+
+
+Extra large or extra small numbers can be written with scientic (exponential)notation:
+
+
+
+var y = 123e5;
+var z = 123e-5;
+
+
+
+JavaScript Arrays
+
+JavaScript arrays are written with square brackets.
+
+Array items are separated by commas.
+
+The following code declares (creates) an array called cars, containg three items(car names)
+
+
+Ex:
+
+var cars = ["Saab", "Volvo", "BMW"]
+
+JavaScript Objects
+
+JavaScipr objects re written with curly braces {}
+Object properties are written as name value pairs, separated by commas.
+
+
+Ex:
+
+
+var person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"}
+
+
+Diffrerence Between undefined and null
+
+undefined and null are equal in value but different in type:
+
+
+
+typeof undefined    //undefined
+typeof null         //object
+
+null === undefined  //false
+null == undefined   //true
+
+
+
+
+Primitive Data
+
+A primitive data value is a single data value with no additional properties and methods.
+
+The typeof operator can return one of these primitive types:
+
+string
+number
+boolean
+undefined
+
+
+Complex Data
+
+The typeof operator can return one of two complex types:
+
+function
+object
+
+The typeof operator returns "object" for objects, arrays, and null.
+The typeof operator does not return "object" for functions.
+
+
+
+JavaScript Objects
+
+
+Real life objects, properties, and methods
+
+in real life, a car is an object
+
+a car has properties like weight and color, and methodslike start and stop:
+
+
+
+All cars have the same properties, but the property values differ from car to car.
+
+All cars have the same methods, but the methods are performed at different times.
+
+
+JavaScript Objects
+
+
+You have already learned that JavaScript variables are containers for data values.
+This code assigns a somple value (Fiat) to a variable named car:
+
+var car = "Fiat";
+
+
+Objects are variables too. But objects can contain many values.
+
+This code assigns many values (Fiat, 500 white) to a variable named car
+
+var car = {type: "Fiat", model: "500", color: "white"};
+
+
+
+
+Object Deinition
+
+You define (and create) a JavaScript object with an object literal:
+
+Ex:
+
+Spaces and line breaks are not important. An object definition can span multiple lines:
+
+
+var person = {
+	firstName: "John",
+	lastName: "Doe",
+	age: 50,
+	eyeColor: "blue"
+};
+
+
+Object Properties
+
+The name:values pairs in JavaScript objects are called properties:
+
+
+
+Accessing object properties
+
+you can access object properties in two ways:
+
+objectName.propertieName
+
+or
+
+objectName["propertyName"]
+
+
+Object Methods
+
+object can also have methods
+
+methods are actions that can be performed on obejects
+
+methods are stored in properties as function definitions.
+
+
+A methods is a function stored as a property
+
+
+
+The this keyword
+
+
+In a function definition, this refers to the "owner" of the function.
+In the example above, this is the person object that "owns" the fullName function.
+In other word, this.firstName means the firstName property of this object
+
+
+Accessing Object Methods
+
+You access an object method with the following syntax:
+
+objectName.methodName()
+
+
+name = person.fullName()
+
+
+JavaScript Events
+
+
+html events are "things" that happen to html elements.
+
+
+when javascript is used in html pages, javascript can "react" on these events.
+
+
+html events
+
+
+an html events can be somethings the browser does, or something a user does.
+
+here are some examples of html events:
+
+ - an html web page has finished loading
+ - an html input field was changed
+ - an html button was clicked
+
+
+often, when events happen, you may want to do something.
+
+javascript lets you execute code when events are detected.
+
+html allows event handler attributes, with javascript code, to be added to html elements.
+
+with single quotes:
+
+<element event='some javascript'>
+
+with double quotes
+
+<element event="some javascript">
+
+in the following example, an onclick attribute (with code), is added to a <button> element:
+
+
+<button onclick="document.getElementById('demo').innerHTML = Date()">The time?</button>
+
+in the example above, the javascript cde changes the content of the element with id="demo".
+
+in the next example, the code changes the content of its own element (using this.innerHTML)
+
+
+JavaScript code is often several lines long. it is more common to see event attributes calling functions:
+
+
+
+Commen html events
+
+here is a list of some common html events:
+
+onchange = an html element has been changed
+onclick = the user clicks an html element
+onmouseover = the user moves the mouse over an html element
+onmouseout = the user moves the mouse away from an html element
+onkeydown = the user pushes a keyboard key
+onload = the browser has finished loading the page
+
+
+What can JavaScript Do?
+
+Event handlers can be used to handle and verify user input, user actions, and browser actions:
+
+ - things that should be done every time a page loads
+ - things that should be done when the page is closed
+ - action that should be performed when a user clicks a button
+ - content that should be verified when a user inputs data
+ - and more...
+
+Many different methods can be used to let javascript work with events:
+
+ - html event attributs can execute javascript code directly
+ - html event attributs can call javascript functions
+ - you can assign your own event handler functions to html elements
+ - you can prevent events from being sent or being handler
+ - and more...
+
+
+
+JavaScript Strings
+
+javascript strings are used for storing and manipulating text.
+
+javascript strings
+
+a javascript string is zero or more characters written inside quotes
+
+var x = "john Doe";
+
+
+you can use single or double quotes:
+
+you can use quotes inside a string, as long as theu don't match the quotes surrounding the string:
+
+string length
+
+to find the length of a string, use the built-in length property:
+
+
+
+Escape Character
+
+because strings must be written whithin quotes, javascript will misunderstand this sring:
+
+var x = "we are the so-called "Vikings" from the north.";
+
+
+The string will be chopped to "We are the so-called".
+
+The solution to avoid this problem, is to use the backslash escape character.
+
+The backslash (\) escape character turns special characters into string characters:
+
+the sequence \" inserts a double quote in a string:
+
+
+Example:
+
+var x = "We are the so-called \"Vikings\" from the north.";
+
+
+
+braking ling code lines
+
+for best readability, programmers often like to avoid code lines longer than 80 characters.
+
+if a javascript statement does not fit on one line, the best place to break it is after an operator:
+
+
+
+Strings can be objects
+
+
+Normally, JavaScript strings are primitive values, create from literals:
+
+var firstName = "John";
+
+
+But string can also be defined as obejects with the keyword new:
+
+var firstName = new String("john");
+
+the first example is a string, the second is an object.
+
+
+Don't create strings as objects. It slows down execution speed.
+The new keyword complicates the code. This can produce some unexpected results:
+
+
+
+String Methods
+
+Strings methods help you to work with strings
+
+String Methods and properies
+
+Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
+
+But with JavaScript, methods and properties are also available to primitive values, because javascript treats primitive values as object when executing methods and properties.
+
+
+String Length
+
+The length property returns the length of string:
+
+var txt = "dasdasda";
+var sln = txt.length;
+
+
+Finding a String in a string
+
+The indexOf() method returns the index o (the position of) the first occurence of a specified text in a string:
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+
+
+The lasIndexOf() method returns the index the last occurrence of a specified text in a string:
+
+var str = "Please locate where 'locate' occurs!";
+var pos = st.lastIndexOf("locate");
+
+
+Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+
+
+
+The lastIndexOf() methods searches backwards (from the end to the begining), meaning: if the second parameter is 15, the search starts at position 15, and searchs to the beginning of the string
+
+
+
+The two methods, indexOf() and search(), are equal?
+
+They accept the same arguments (parameters), and return the same value?
+The two methods are not equal. These are the differences:
+
+ - The search() method cannot take a second start position argument.
+ - The indexOf() method cannot take powerfull search values (regular expressions).
+
+
+
+Extracting strings Parts
+
+There are 3 methods for extracting a part of a string:
+
+ - sice(start, end)
+ - substring(start, end)
+ - substr(start, length)
+
+
+The slice() method
+
+slice() extracts a part of a string and returns the extracted part in a new string.
+The method takes 2 parameters: The start position, and the end position (end not included).
+The example slices out a portion of a string from position 7 to position 12 (13-1)
+
+
+If a parameter is negative, the position is counted from the end od the string.
+This example slices out a portion of a string from position -12 to position -6
+
+
+if you omit the second parameter, the method will slice out the rest of the string:
+
+
+substring() is similarto slice()
+The difference is that substring() cannot accept negative indexes.
+
+var str = "Apple, banana, kiwi';
+var res = str.substring(7, 13);
+
+
+
+
+The substr() method
+
+substr() is similar to slice()
+
+The difference is that the second parameter specifies the length of the extracted part.
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+
+the result of res will be:
+
+Banana
+
+
+Replacing String content
+
+The replace() method replaces a specified value with another value in a string:
+
+
+var str = "Please visit Microsoft!";
+var n = str.replace("Microsfot", "w3schools");
+
+The replace() method does not change the string it is called on. It returns a new string.
+
+
+By default, the replace() method replaces only the first match:
+
+replace() method is case sensitive
+
+
+To replace case insensitive, use a regular expression with an /i flag (insensitive):
+
+var str = "Please visit Microsoft!";
+var n = str.replace(/MICROSOFT/i, "W3schools");
+
+
+
+To replace all matches, use a regular expression with /g flag (global match):
+
+str.replace(/Microsoft/g, "W3Schools");
+
+
+
+Converting to Upper and Lower Case
+
+A string is converted to upper case with toUpperCase():
+
+var text1 = "Hello World!";
+var text2 = text1.toUpperCase();
+
+A string is converted to lower case with toLowerCase():
+
+var text1 = "Hello World!";
+var text2 = text1.toLowerCase();
+
+
+The concat() Method
+
+concat() joins two or more strings
+
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+
+
+The concat() method can be used instead of the plus operator. These two lines do the same:
+
+var text = "Hello" +  " " + "World!";
+var text = "Hello".concat(" ", "World!");
+
+All string methods return a new string. They dont modify the original string.
+Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+
+
+String.trim()
+
+The trim() method removes whitespace from both sides of a string:
+
+
+var str =  "      Hello World!      ";
+alert(str.trim()).
+
+
+You can also use the replace solution above to add a trim function to the JavaScript String.prototype>
+
+
+JavaScript String Padding
+
+ECMAScript 2017 added two string methods: padStart and padEnd to support padding at the beginning and at the end of a string.
+
+
+

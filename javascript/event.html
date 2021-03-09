@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event</title>
+</head>
+<body>
+    
+    <h3>um evento no botao que adiciona a data ao elemento abaixo</h3>
+
+    <p>Date: <span id="demo"></span></p>
+
+    <button onclick="document.getElementById('demo').innerHTML = Date()">The time</button>
+
+    <h3>No próximo exemplo o código muda o conteúdo do próprio elemento usando this.innerHTML</h3>
+
+    <button onclick="this.innerHTML = Date()">Clique para aparecer a data</button>
+
+</body>
+</html>

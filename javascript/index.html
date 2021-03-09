@@ -11,7 +11,8 @@
 
     <h3>innerHTML</h3>
     <div>
-        <div id="demo"></div>
+        <div id=
+        "demo"></div>
     </div>
 
     <script>
@@ -28,5 +29,132 @@
     <h3>javascript print</h3>
 
     <button onclick="window.print()">Imprimir</button>
+
+    <h3>Exponentiation</h3>
+
+    <span id="cont"></span>
+
+    <script>
+        
+        var x = 5;
+        var y = 2;
+        var z = x ** y;
+
+        document.write('resultado: '+z);
+
+    </script>
+
+    <h3>JavaScript Objects</h3>
+
+    <script>
+        var person = {
+            firstName: "John",
+            secondName: "Doe",
+            age: 40,
+            eyeColor: "blue"
+        };
+
+        document.write("First Name: "+person.firstName+"<br>");
+        document.write("Seconde Name: "+person.secondName+"<br>");
+        document.write("Age: "+person.age+"<br>");
+        document.write("Eye Color: "+person.eyeColor+"");
+    </script>
+
+    <h3>Objects</h3>
+
+    <script>
+
+        var person = {
+
+            firstName: "John",
+            lastName: "Doe",
+            age: 35,
+            fullName: function(){
+                return this.firstName + " " + this.lastName;
+            }
+
+        };
+
+        
+
+    </script>
+
+    <h3>Division by zero</h3>
+
+
+    <script>
+
+        var resul = 2 / 0;
+
+        document.write(resul);
+
+    </script>
+
+    <h3>toString() method to output numbers from base 2 to  base 36</h3>
+    
+    <script>
+
+        var myNumber = 32;
+        document.write(myNumber.toString(10));
+        document.write("<br>");
+        document.write(myNumber.toString(32));
+        document.write("<br>");
+        document.write(myNumber.toString(16));
+
+    </script>
+
+    <hr>
+
+    <h3>Changing HTML attributes with javascript</h3>
+
+    <button onclick="document.getElementById('myImage').src ='pic_bulbon.gif'">On</button>
+    <img src="pic_bulboff.gif" alt="lamp" id="myImage" style="width: 100px;">
+    <button onclick="document.getElementById('myImage').src = 'pic_bulboff.gif'">Off</button>
+
+    <hr>
+
+    <h3>JavaScript can change the style of an HTML element.</h3>
+
+    <button onclick="changeSize()">Change size of the font</button>
+
+    <script>
+        function changeSize(){
+            document.getElementById('size').style.fontSize = '35px'
+        }
+    </script>
+
+    <p id="size">Mude o tamanho da letra</p>
+
+    <hr>
+
+    <h3>JavaScript can hide HTML elements</h3>
+
+    <button onclick="document.getElementById('element').style.display = 'none'">Hide elements</button>
+
+    <p id="element">Esse element será escondido</p>
+
+    <h3>try catch</h3>
+
+    <p id="demo"></p>
+
+    <script>
+
+        try{
+            adddlert('Welcome guest!');
+        }catch(err){
+            document.getElementById("demo").innerHTML = err.message;
+        }
+
+    </script>
+
+    <h3>variáveis podem ser usadas antes mesmo de serem declaradas</h3>
+
+    <span id="befo"></span>
+
+    <script>
+        document.getElementById('befo').innerHTML = before;
+        var before = "text";
+    </script>
+
 </body>
 </html>

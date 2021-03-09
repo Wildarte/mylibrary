@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <span id="demo"></span>
+
+    <script>
+
+        var fruits = ["banana", "apple", "orange", "mango"];
+        document.getElementById("demo").innerHTML = fruits.join(", ");
+
+    </script>
+
+    <h3>sorting an array</h3>
+
+    <button onclick="sortFunc()">Sortear</button>
+
+    <span id="sort">s</span>
+
+    <script>
+        
+        function sortFunc(){
+
+            var cars = ["Fusca", "Chevete", "Brasilia", "Nave"];
+            document.getElementById("sort").innerHTML = cars.sort();
+
+        }
+
+    </script>
+
+    <br>
+    <hr>
+
+    <button onclick="funcSort1()">Sort alphanum</button>
+    <button onclick="funcSort2()">Sort num</button>
+
+    <p id="res"></p>
+    <script>
+
+        var points = [40,100,1,5,25,10];
+        document.getElementById("res").innerHTML = points;
+
+        function funcSort1(){
+            points.sort();
+            document.getElementById("res").innerHTML = points;
+        }
+
+        function funcSort2(){
+            points.sort(function(a,b){return a - b});
+            document.getElementById("res").innerHTML = points;
+        }
+
+    </script>
+
+</body>
+</html>

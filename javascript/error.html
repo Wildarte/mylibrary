@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <p>Entre com um número entre 5 a 10:</p>
+
+    <input type="text" id="demo">
+    <button type="button" onclick="myFunction()">Test input</button>
+    <p id="p01"></p>
+    <script>
+
+        function myFunction(){
+
+            var message, x;
+            message = document.getElementById('p01');
+            message.innerHTML = "";
+            x = document.getElementById('demo').value;
+
+            try{
+                if(x == "") throw "empty";
+                if(isNaN(x)) throw "not a empty";
+                x = Number(x);
+                if(x < 5) throw "too low";
+                if(x > 10) throw "too high";
+                
+            }catch(err){
+                message.innerHTML = "Input is " + err;
+            }
+
+        }
+
+    </script>
+
+    <h4>Meu exemplo:</h4>
+
+    <p>Escreva a baixo a palavra "Rosa"</p>
+
+    <input type="text" name="" id="word">
+    <button onclick="myFunction2()">Valida</button>
+    <p id="result"></p>
+
+    <small style="color:red">no example o baixo definimos no próprio html o valor máximo e mínimo que o campo aceita</small>
+
+    <form action="" method="POST">
+        <input id="demo" type="number" min="5" max="10" step="1">
+        <input type="submit" value="Envia">
+    </form>
+
+
+    <script>
+
+        var msg, value;
+        msg = document.getElementById('result');
+        msg.innerHTML = "";
+        value = document.getElementById('word');
+        try{
+            if(value = "") throw "está vazio";
+            if(value != "Rosa") throw "tem o nome errado!";
+            alert('Nome está certo');
+        }catch(err){
+            msg.innerHTML = "A entrada " + err;
+        }
+
+    </script>
+
+    <h3>o exemplo abaixo é usando try catch e finally</h3>
+
+    <p>Entre com um numero entre 10 e 20</p>
+
+    <input type="text" name="" id="num">
+    <button type="button" onclick="funcNum()">Valida</button>
+    <p id="resultNum"></p>
+
+    <script>
+
+        function funcNum(){
+
+            var msg1, x1;
+            msg1 = document.getElementById('resultNum');
+            msg1.innerHTML = "";
+            x1 = document.getElementById('num').value;
+
+            try{
+                
+                if(x1 == "") throw "está vazio";
+                if(isNaN(x1)) throw "não é um número";
+                x1 = Number(x1);
+                if(x1 < 10) throw "é menor que 10";
+                if(x1 > 20) throw "é maior que 20";
+
+            }catch(err){
+
+                msg1.innerHTML = "O valor " + err;
+
+            }finally{
+
+                document.getElementById('num').value = " ";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
