@@ -1611,4 +1611,13 @@ in other words; a variable can be used before it has been declared.
 
 
 
-((JS Strict Mode))
+JavaScript Use Strict
+
+"use strict"; Defines that javascript code should be executed in "strict mode"
+
+
+The "use strict" Directive
+
+the use strict directive was new in ECMAScript version 5.
+it is not a statement, but a literal expression, ignored by earlier versions of javascript.
+the purpose of "use strict" is to indicate that the code should be executed in "strict mode"
